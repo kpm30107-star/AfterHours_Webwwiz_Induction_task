@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowVault | WebWiz Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-neutral-400 text-gray-900 transition-colors duration-300">
+    <nav class="fixed top-0 w-[100%] z-50 p-4 shadow-xl bg-cyan-950 border-b flex justify-between items-center">
+        <figure>
+            <img src="image/logo-design-about-video-shooting-vector.jpg" class="h-[47px] rounded-[24px]">
+        </figure>
+        <ul class="flex text-white font-medium text-md space-x-6">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Home</a></li>
+            <li><a href="#comedy" class="hover:text-cyan-400 transition-colors">Comedy</a></li>
+            <li><a href="#scifi" class="hover:text-cyan-400 transition-colors">Sci-Fi</a></li>
+            <li><a href="#action" class="hover:text-cyan-400 transition-colors">Action</a></li>
+            <li><a href="#anime" class="hover:text-cyan-400 transition-colors">Anime</a></li>
+            <li>
+                <div class="space-x-4">
+                    <button id="dark-mode-toggle" class="bg-cyan-900 px-2.5 pl-1 py-1 rounded hover:text-cyan-400 transition-colors">🌙 Mode</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <header class="relative h-[400px] w-full flex items-center justify-center shadow-xl bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-50 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070');"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4">After Hours</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-6">The Ultimate Late-Night Watchlist</p>
+        </div>
+    </header>
+
+    <main class="p-8">
+        <section id="comedy" class="mb-16">
+            <h2 class="text-red-300 text-3xl font-bold mb-8 border-l-4 border-red-300 pl-4">Comedy</h2>
+            <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-6">
+                <article id="friends" class="show-card relative h-[260px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/friends1.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Friends</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">10 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>This hit sitcom follows the many misadventures of six 20-something pals as they navigate the pitfalls of work, life and love in 1990s Manhattan</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/psych4.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Psych</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">8 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>Shawn Spencer appears to posses a nearly supernatural gift for crime-solving — so much so that the police begin employing his services as a psychic</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/b99.webp" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Brooklyn Nine-Nine</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">8 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>In this lighthearted comedy,the quirky detectives of the NYPD's 99th precinct fight crimes big and small — and cause plenty of chaos along the way</p>
+                    </div>
+                </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="scifi" class="mb-16">
+            <h2 class="text-red-300 text-3xl font-bold mb-8 border-l-4 border-red-300 pl-4">Sci-Fi</h2>
+            <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-6">
+                <article class="show-card relative h-[260px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/umbrellaacademy.webp" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">The Umbrella Academy</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">4 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>Reunited by their father's death,estranged siblings with extraordinary powers uncover shocking family secrets—and a looming threat to humanity</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/stranger1.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Stranger Things</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">5 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/image (3).jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Alice In Boderland</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">3 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>A slacker competes in high-stakes games of life and death.</p>
+                    </div>
+                </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="action" class="mb-16">
+            <h2 class="text-red-300 text-3xl font-bold mb-8 border-l-4 border-red-300 pl-4">Action</h2>
+            <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-6">
+                <article class="show-card relative h-[260px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/rookie.webp" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">The Rookie</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">5 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>Reunited by their father's death,estranged siblings with extraordinary powers uncover shocking family secrets—and a looming threat to humanity</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/recruit.webp" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">The Recruit</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">2 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/arcane2.webp" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Arcane League Of Legends</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">2 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.</p>
+                    </div>
+                </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section id="anime" class="mb-16">
+            <h2 class="text-red-300 text-3xl font-bold mb-8 border-l-4 border-red-300 pl-4">Anime</h2>
+            <div class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-6">
+                <article class="show-card relative h-[260px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/demon.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Demon Slayer</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">4 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>After a demon attack leaves his family slain and his sister cursed, Tanjiro embarks upon a perilous journey to find a cure and avenge those he's lost</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/hunterxhunter.webp" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Hunter x Hunter</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">6 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>To fulfill his dreams of becoming a legendary Hunter like his dad,a young boy must pass a rigorous examination and find his missing father</p>
+                    </div>
+                </div>
+                </article>
+
+                <article class="show-card relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front absolute inset-0 bg-white p-4 flex flex-col transition-all duration-500 group-hover:scale-105">
+                        <div class="h-[140px] bg-gray-300 rounded mb-2 overflow-hidden">
+                            <img src="show-images/pretender.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold">Great Pretender</h3>
+                        <div class="star-rating w-[30%] flex space-x-1" onclick="handleStarClick(event, this)">
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="1">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="2">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="3">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="4">★</span>
+                            <span class="star text-2xl text-gray-300 hover:text-yellow-400" data-value="5">★</span>
+                        </div>
+                        <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded w-fit">2 Seasons</span>
+                    </div>
+                    <div class="card-back hidden absolute inset-0 flex flex-col justify-center items-center text-center transition-all  duration-500 p-4 bg-cyan-900 opacity-[95%] text-gray-200 text-md">
+                        <p>Supposedly Japan's greatest swindler,Makoto Edamura gets more than he bargained for when he tries to con Laurent Thierry, a real world-class crook</p>
+                    </div>
+                </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-cyan-950 text-gray-300 py-12 px-8 border-t border-cyan-950 text-center">
+        <p class="text-sm leading-relaxed">
+                © 2025 AfterHours by Kavya Maheshwari.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
