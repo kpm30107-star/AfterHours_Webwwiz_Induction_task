@@ -1,16 +1,16 @@
-// Function for Dark Mode Toggle [cite: 36]
+// Function for Dark Mode Toggle 
 const toggleBtn = document.getElementById('dark-mode-toggle');
 toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     console.log("Dark mode toggled!");
 });
 
-// Function for Show/Hide (Flip) logic [cite: 40]
+// Function for Show/Hide 
 function flipCard(cardElement) {
     const backSection = cardElement.querySelector('.card-back');
     const frontSection = cardElement.querySelector('.card-front');
     
-    // Simple show/hide toggle for the description
+    // show/hide toggle for the description
     if (backSection.classList.contains('hidden')) {
         backSection.classList.remove('hidden');
         frontSection.classList.add('opacity-20'); // Fade the front
@@ -20,9 +20,8 @@ function flipCard(cardElement) {
     }
 }
 
-// 2. Interactive Star Rating [cite: 34, 39]
+// Star Rating 
 function handleStarClick(event, container) {
-    // Stop the click from triggering the card flip
     event.stopPropagation();
     
     if (event.target.classList.contains('star')) {
@@ -31,8 +30,6 @@ function handleStarClick(event, container) {
         container.setAttribute('data-chosen-rating', ratingValue);
 
         updateStarUI(container, ratingValue);
-        
-        // Visual confirmation [cite: 37, 39]
         console.log(`Rating permanently set to: ${ratingValue}`);
     }
 }
@@ -42,7 +39,7 @@ function updateStarUI(container, value) {
     stars.forEach(star => {
         const starValue = parseInt(star.getAttribute('data-value'));
         if (starValue <= value) {
-            star.classList.add('active'); // CSS will color this gold
+            star.classList.add('active'); 
             star.classList.remove('text-gray-300');
         } else {
             star.classList.remove('active');
@@ -51,13 +48,10 @@ function updateStarUI(container, value) {
     });
 }
 
-// 3. Card Flip/Description Toggle [cite: 40]
+//Card Flip/Description Toggle 
 function toggleDescription(card) {
     card.classList.toggle('is-active');
 }
 
-// 3. Card Flip/Description Toggle [cite: 40]
-function toggleDescription(card) {
-    card.classList.toggle('is-active');
-}
+
 

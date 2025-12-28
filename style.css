@@ -1,15 +1,15 @@
-/* Custom Card Flip Logic [cite: 34, 38] */
+/* Card Flip */
 .show-card {
     perspective: 1000px;
 }
 
-/* Level 2: Shadow and Rounded Corners [cite: 29, 30] */
+/* Shadow and Rounded Corners */
 .show-card {
-    border-radius: 0.75rem; /* rounded-xl */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    border-radius: 0.75rem; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); 
 }
 
-/* Dark Mode Helper [cite: 36] */
+/* Dark Mode */
 body.dark-mode {
     background-color: #1a202c;
     color: #f7fafc;
@@ -23,20 +23,20 @@ body.dark-mode .bg-white {
 
 
 
-/* Star base color */
+/* Star color */
 .star {
     cursor: pointer;
     color: #d1d5db; /* gray-300 */
     transition: color 0.2s transform 0.2s;
 }
 
-/* Star color when 'set' or active  */
+/* Star color active  */
 .star.active {
-    color: #fbbf24 !important; /* gold/yellow-400 */
+    color: #fbbf24 !important; 
 }
 
-/* Hover effect for better UX  */
+/* Hover effect */
 .star:hover {
     transform: scale(1.2);
-    color: #fcd34d; /* lighter yellow */
+    color: #fcd34d; 
 }
