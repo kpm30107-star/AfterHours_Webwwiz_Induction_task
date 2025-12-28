@@ -10,7 +10,7 @@
 ⋆｡°✩ Implemented Features ⋆｡°✩
 
 ⋆｡° Level 1: The Skeleton
-* Semantic Layout : Used a clean and structured HTML5 layout including <nav>, <header>, <main>, <section>, <article>, and <footer>.
+* Semantic Layout : Used a clean and structured HTML5 layout including `<nav>`, `<header>`, `<main>`, `<section>`, `<article>`, and `<footer>`.
 * Navbar : Features a logo and navigation links for easy site access.
 * Hero Section : A bold banner with a primary headline and sub-headline to introduce the topic.
 * Footer : Contains copyright text.
