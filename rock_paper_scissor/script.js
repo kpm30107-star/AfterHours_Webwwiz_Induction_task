@@ -66,7 +66,6 @@ choices.forEach((choice)=>{
         const playerChoice = choice.getAttribute("id");
         const sound = document.getElementById("sound");
         sound.play();
-        console.log("hi");
         game(playerChoice);
     });
 });
