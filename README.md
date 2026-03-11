@@ -28,9 +28,9 @@
 
 ⋆｡° Tech Stack ⋆｡°
 
-* HTML5 : Semantic structure.
-* CSS / Tailwind CSS : Responsive design and aesthetics.
-* JavaScript : Interactivity and DOM manipulation.
+* HTML5 : Semantic structure
+* CSS / Tailwind CSS : Responsive design and aesthetics
+* JavaScript : Interactivity and DOM manipulation
 
 
 ⋆｡° Learning Sources ⋆｡°
